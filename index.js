@@ -25,7 +25,7 @@ app.listen(PORT, () => {
 //This is here to handle all the uncaught promise rejections
 process.on("unhandledRejection", (error) => {
     if (error) {
-        console.error("Uncaught Error", pe(error));
+        console.error("Uncaught Error " + error);
     } else {
         console.error("UNDEFINED ERROR WAS CAUGHT");
     }
