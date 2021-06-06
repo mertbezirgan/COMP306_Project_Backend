@@ -4,7 +4,7 @@ const cors = require("cors");
 const { rs, re } = require("./utils/utils");
 const v1 = require("./routes/v1");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const app = express();
 

@@ -5,9 +5,9 @@ const searchMovies = async (req, res) => {
     if (startIndex === undefined || length === undefined) return re(res, { message: 'Please give startIndex and length' }, 400);
 
 	let [err, data] = await qu(
-		`select mo.*, mg.genre from movies as mo, movies_genres as mg where ${
-			query ? `name like "%${query}%" and` : ""
-		} mo.id = mg.movie_id order by id limit ${length} offset ${startIndex}`
+		`select mo.* from movies as mo where ${
+			query ? `name like "%${query}%" ` : ""
+		} order by id limit ${length} offset ${startIndex}`
 	);
 	if (err) return re(res, err);
 
