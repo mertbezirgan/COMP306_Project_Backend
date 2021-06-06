@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv").config(); //instatiate environment variables
 const cors = require("cors");
+const logger = require("morgan");
 const { rs, re } = require("./utils/utils");
 const v1 = require("./routes/v1");
 
@@ -10,6 +11,7 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(logger("dev"));
 
 app.use(v1);
 
