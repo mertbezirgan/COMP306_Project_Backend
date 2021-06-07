@@ -7,7 +7,8 @@ const directorController = require("../controllers/directorController");
 const actorController = require("../controllers/actorController");
 
 router.post("/home/searchMovies", homeController.searchMovies);
-router.get("/home/geRandomMovies", homeController.getRandomMovies);
+router.get("/home/getRandomMovies", homeController.getRandomMovies);
+router.get("/home/getGenres", homeController.getDistinctGenres);
 
 router.get("/movie/:id", movieController.getById);
 

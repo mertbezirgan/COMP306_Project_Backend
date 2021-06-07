@@ -4,13 +4,19 @@ const db = require("../config/dbConfig");
 // Util for returning query into promise
 const qu = (q) => {
     return new Promise((resolve) => {
+        // console.log( "querry : " + q)
         try {
             db.query(q, (err, result) => {
-                if (err) resolve([err, null]);
-                else resolve([null, result]);
+                if (err) {
+                    resolve([err, null]);
+                    console.log("error: " + err)
+                }else {
+                    resolve([null, result]);
+                }
             });
         } catch (error) {
             resolve([error, null]);
+            console.log("error2: " + err)
         }
     });
 };
