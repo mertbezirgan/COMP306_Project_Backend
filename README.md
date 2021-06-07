@@ -17,4 +17,4 @@ Node.js api made for Comp306 Database Management class in Koç University.
 <h3>How to run?</h3>
 <li>npm i => installs node modules</li>
 <li>npm start => starts app</li>
-<li>Once started the server will be active on [http://localhost:3001](http://localhost:3001)</li>
+<li>Once started the server will be active on http://localhost:3001</li>
