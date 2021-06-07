@@ -2,6 +2,12 @@
 
 Node.js api made for Comp306 Database Management class in Koç University.
 
+<h3>Group members</h3>
+<li>Mehmet Mert Bezirgan</li>
+<li>Orhan Ceyhun Aslan</li>
+<li>Ekrem Yiğiter</li>
+<li>Umut Öztunç</li>
+
 <h3>Requirements</h3>
 <li>Node js</li>
 
