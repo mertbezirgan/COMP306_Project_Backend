@@ -36,7 +36,7 @@ const searchTMDB = async ({ title, year }) => {
         result.poster_path = `https://image.tmdb.org/t/p/w500${result.poster_path}`;
     } else {
         result = {
-            poster_path: `https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg`,
+            poster_path: `https://2gyntc2a2i9a22ifya16a222-wpengine.netdna-ssl.com/wp-content/uploads/sites/29/2014/12/Image-Not-Available.jpg`,
         };
     }
     return result.poster_path;

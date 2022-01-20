@@ -1,4 +1,5 @@
 const { rs, re, qu } = require("../utils/utils");
+const { getImage } = require("../controllers/imageController");
 
 const getById = async (req, res) => {
     let { id } = req.params;
@@ -27,6 +28,13 @@ const getById = async (req, res) => {
         `
     );
     if (err2) return re(res, err2);
+
+    for (let i = 0; i < movieData.length; i++) {
+        movieData[i].poster_path = await getImage({
+            title: movieData[i].name,
+            year: movieData[i].year,
+        });
+    }
 
     return rs(res, { actorData, movieData });
 };
